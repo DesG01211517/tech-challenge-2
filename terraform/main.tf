@@ -81,3 +81,14 @@ resource "aws_ecr_repository" "tech_challenge_repo" {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
