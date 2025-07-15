@@ -1,0 +1,12 @@
+{
+  "apiVersion": "v1",
+  "kind": "ConfigMap",
+  "metadata": {
+    "name": "aws-auth",
+    "namespace": "kube-system"
+  },
+  "data": {
+    "mapRoles": "- rolearn: arn:aws:iam::801010559159:role/node_group-eks-node-group-20250714011647899000000001\n  username: system:node:{{EC2PrivateDNSName}}\n  groups:\n    - system:bootstrappers\n    - system:nodes",
+    "mapUsers": "- userarn: arn:aws:iam::801010559159:user/TechC2-User\n  username: admin\n  groups:\n    - system:masters"
+  }
+}
